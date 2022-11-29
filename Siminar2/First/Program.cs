@@ -5,25 +5,25 @@
 
 int Prompt(string message)
 {
-System.Console.Write($"{message} >");
-int answer = Convert.ToInt32(Console.ReadLine());
-return answer;
+    System.Console.Write($"{message} >");
+    int answer = Convert.ToInt32(Console.ReadLine());
+    return answer;
 }
 
 bool ValidateNumber(int number)
 {
-if (number >= 100 && number < 1000)
-{
-return true;
-}
+    if (number >= 100 && number < 1000)
+    {
+        return true;
+    }
 
-System.Console.WriteLine("Число не трехзначное");
-return false;
+    System.Console.WriteLine("Число не трехзначное");
+    return false;
 }
 
 int number = Prompt("Введите число");
 if (ValidateNumber(number))
 {
-int result = number % 10;
-System.Console.WriteLine($"Последняя цифра введенного числа {result}");
+    int result = number % 10;
+    System.Console.WriteLine($"Последняя цифра введенного числа {result}");
 }
