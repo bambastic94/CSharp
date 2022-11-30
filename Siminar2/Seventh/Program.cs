@@ -23,7 +23,7 @@ int k = 1;
 while (crat != 0)
 {
     System.Console.WriteLine($"Число {randnumber} не кратно {number}");
-    randnumber =random();
+    randnumber = random();
     crat = randnumber % number;
     k++;
 }
@@ -37,6 +37,17 @@ System.Console.WriteLine($"Число {randnumber} кратно {number}, поп
 //     .....
 //     if(...)
 //     {
+//         break;
+//     }
+// }
+
+// while (true)
+// {
+//     int value = new Random().Next(0, 10);
+//     Console.WriteLine(value);
+//     if (value % div == 0)
+//     {
+//         Console.WriteLine($"Мы нашли делитель, это - {value}");
 //         break;
 //     }
 // }
