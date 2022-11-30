@@ -16,10 +16,10 @@ int max = number % 10;
 int k = 2;
 int i = 1;
 
-if (number > 100 & number < 1000)   k = 3;
+if (number > 100 & number < 1000) k = 3;
 if (number > 1000 & number < 10000) k = 4;
 
-while( i < k )
+while (i < k)
 {
     if (proverka(number) > max)
     {
@@ -30,3 +30,22 @@ while( i < k )
 }
 
 System.Console.WriteLine($"В числе {chislo} самая большая цифра {max}");
+
+// Быстрое и более простое решение
+
+// int value = new Random().Next(10,10000);
+// Console.WriteLine(value);
+
+// int max = 0;
+
+// while (value >0)
+// {
+// int num = value % 10;
+// value = value /10;
+// if (max < num)
+// {
+// max = num;
+// }
+// }
+
+// Console.WriteLine("MAX = " + max);
