@@ -20,6 +20,6 @@ if (number1 % number2 == 0)
 }
 else
 {
-    int ostatok = number1 - (number1 / number2) * number2;
+    int ostatok = number1 % number2;
     System.Console.WriteLine($"{number1} не кратно {number2}, остаток {ostatok}");
 }
