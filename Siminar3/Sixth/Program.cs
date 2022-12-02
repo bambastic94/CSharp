@@ -24,3 +24,25 @@ while (counter <= length)
     counterInside = 1;
     number++;
 }
+
+// void Counter(int number)
+// {
+//     int index = 1;
+//     int index_lev1 = 1;
+//     while (true)
+//     {
+//         int index_counter = 1;
+//         int counter_lev1 = index_lev1;
+//         while (index_counter <= counter_lev1)
+//         {
+//             if (index <= number)
+//             {
+//                 Console.Write($"{counter_lev1}, ");
+//                 index_counter++;
+//                 index++;
+//             }
+//             else return;
+//         }
+//         index_lev1++;
+//     }
+// }
