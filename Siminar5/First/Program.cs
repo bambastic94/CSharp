@@ -25,28 +25,21 @@ void PrintArray(int[] array)
     }
 }
 
-int SumNegative(int[] array)
+int SumSign(int[] array, bool IsPossitive = true)
 {
+    int sign = 1;
+    if (!IsPossitive)
+    {
+        sign = -1;
+    }
     int sum = 0;
     foreach (int item in array)
     {
-        if(item<0)
-        sum += item;
+        if (item * sign < 0)
+            sum += item;
     }
     return sum;
 }
-
-int SumPositive(int[] array)
-{
-    int sum = 0;
-    foreach (int item in array)
-    {
-        if(item>0)
-        sum += item;
-    }
-    return sum;
-}
-
 
 int length = Promt($"Введите длину массива");
 int minrange = Promt($"Введите минимальную цифру для образования массива");
@@ -56,6 +49,6 @@ int[] array = GenerateArray(length, minrange, maxrange);
 PrintArray(array);
 System.Console.WriteLine();
 
-int neg = SumNegative(array);
-int pos = SumPositive(array);
+int neg = SumSign(array);
+int pos = SumSign(array,false);
 System.Console.WriteLine($"Сумма позитивных чисел в массиве ={pos} , а негативных =({neg})");
