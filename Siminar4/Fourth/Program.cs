@@ -31,14 +31,17 @@ int SecondMax(int[] array)
     int max2 = 0;
     for (int i = 1; i < array.Length; i++)
     {
-        if (array[i]>max)
+        if (array[i] != max)
         {
-            max2=max;
-            max=array[i];
-        }
-        else if(array[i]>max2)
-        {
-            max2 = array[i];
+            if (array[i] > max)
+            {
+                max2 = max;
+                max = array[i];
+            }
+            else if (array[i] > max2)
+            {
+                max2 = array[i];
+            }
         }
     }
     return max2;
