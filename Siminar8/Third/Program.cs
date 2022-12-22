@@ -44,7 +44,7 @@ int[] Dictionary(int[,] array)
         {
             for (int j = 0; j < array.GetLength(1); j++)
             {
-                if(k == array[i,j])
+                if (k == array[i, j])
                 {
                     count++;
                 }
@@ -54,6 +54,16 @@ int[] Dictionary(int[,] array)
     }
     return dict;
 }
+
+// int[] Dictionary(int[,] array)               !!!!
+// {
+//     int[] Dict = new int[10];
+//     foreach (int item in array)
+//     {
+//         Dict[item]++;
+//     }
+//     return Dict;
+// }
 
 void PrintDictionary(int[] array)
 {
