@@ -45,7 +45,7 @@ bool ConfirmMultiply(int[,] array1, int[,] array2)
     }
 }
 
-int FindDemension(int[,] array)
+int FindMinDemension(int[,] array)
 {
     if (array.GetLength(0) <= array.GetLength(1))
     {
@@ -57,17 +57,29 @@ int FindDemension(int[,] array)
     }
 }
 
+int FindMaxDemension(int[,] array)
+{
+    if (array.GetLength(0) <= array.GetLength(1))
+    {
+        return array.GetLength(1);
+    }
+    else
+    {
+        return array.GetLength(0);
+    }
+}
+
 int[,] MultiplyArray(int[,] array1, int[,] array2)
 {
-    int[,] array = new int[FindDemension(array1), FindDemension(array1)];
+    int[,] array = new int[FindMinDemension(array1), FindMinDemension(array1)];
     int row = 0;
-    for (int i = 0; i < array1.GetLength(0); i++)
+    for (int i = 0; i < FindMinDemension(array1); i++)
     {
-        for (int k = 0; k < FindDemension(array1); k++)
+        for (int k = 0; k < FindMinDemension(array1); k++)
         {
-            for (int j = 0; j < array1.GetLength(1); j++)
+            for (int j = 0; j < FindMaxDemension(array1); j++)
             {
-                if (FindDemension(array1) == array1.GetLength(0))
+                if (FindMinDemension(array1) == array1.GetLength(0))
                 {
                     array[row, k] += array1[i, j] * array2[j, k];
                 }
