@@ -5,8 +5,8 @@
 
 int Prompt(string message)
 {
-    System.Console.Write(message);
-    return int.Parse(Console.ReadLine());
+    Console.WriteLine($"{message} >");
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 void PrintNumbers(int number)

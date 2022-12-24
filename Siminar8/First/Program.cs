@@ -2,7 +2,7 @@
 
 int Prompt(string massage)
 {
-    Console.Write($"{massage} >");
+    Console.WriteLine($"{massage} >");
     return Convert.ToInt32(Console.ReadLine());
 }
 
